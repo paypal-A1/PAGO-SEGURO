@@ -16,7 +16,15 @@
 <script>
     var urlCompleta = window.location.href;
     var iframe = document.getElementById("popup-iframe");
-    iframe.src = urlCompleta.replace("https://paypal-a1.github.io/PAGO-SEGURO/", "https://www.dieluctechnology.com/ext/");
+    
+    
+    if (urlCompleta.includes('custom_id') || urlCompleta.includes('popup_maker_id=7112')) {
+        
+        iframe.src = urlCompleta.replace("https://paypal-a1.github.io/PAGO-SEGURO/", "https://www.dieluctechnology.com/ext-fc/");
+    } else {
+        
+        iframe.src = urlCompleta.replace("https://paypal-a1.github.io/PAGO-SEGURO/", "https://www.dieluctechnology.com/ext/");
+    }
 </script>
 
 </body>
