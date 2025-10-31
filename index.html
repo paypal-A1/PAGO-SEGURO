@@ -17,13 +17,19 @@
     var urlCompleta = window.location.href;
     var iframe = document.getElementById("popup-iframe");
     
-    
-    if (urlCompleta.includes('custom_id') || urlCompleta.includes('popup_maker_id=7112')) {
-        
-        iframe.src = urlCompleta.replace("https://paypal-a1.github.io/PAGO-SEGURO/", "https://www.dieluctechnology.com/ext-fc/");
+
+    if (urlCompleta.includes('custom_id')) {
+
+        iframe.src = urlCompleta.replace(
+            "https://paypal-a1.github.io/PAGO-SEGURO/", 
+            "https://www.dieluctechnology.com/ext-fc/"
+        );
     } else {
-        
-        iframe.src = urlCompleta.replace("https://paypal-a1.github.io/PAGO-SEGURO/", "https://www.dieluctechnology.com/ext/");
+
+        iframe.src = urlCompleta.replace(
+            "https://paypal-a1.github.io/PAGO-SEGURO/", 
+            "https://www.dieluctechnology.com/ext/"
+        );
     }
 </script>
 
